@@ -1,22 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Search from './search/'
+import 'element-theme-default';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          single page app for search.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Search></Search>
       </header>
     </div>
   );
