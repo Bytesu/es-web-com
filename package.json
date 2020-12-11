@@ -2,14 +2,12 @@
   "name": "es-web-com",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://api.github.com/",
+  "proxy": "https://api.github.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
-    "element-react": "^1.4.34",
-    "element-theme-default": "^1.4.13",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -21,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "brunch-build": "brunch build -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "terser-brunch": "^4.0.0",
     "webpack-cli": "^4.2.0"
   }
 }
