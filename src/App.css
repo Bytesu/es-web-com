@@ -2,15 +2,25 @@
   text-align: center;
   padding:20px;
   background-color: #282c34;
+  min-height: 100vh;
 }
 .App-header {
-  min-height: 100vh;
+
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
 }
