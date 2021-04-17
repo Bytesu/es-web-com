@@ -1,21 +1,11 @@
 import './App.css';
 import React from 'react';
-import FrontWork from './work/'
+import Pages from './pages/'
 class App extends React.PureComponent {
-    state = {
-    }
-
-    componentDidMount() {
-    }
-
-    static getDerivedStateFromProps() {
-        return null;
-    }
-
     render() {
         return (
             <div className="App">
-                <FrontWork></FrontWork>
+                <Pages></Pages>
             </div>
         )
     };
