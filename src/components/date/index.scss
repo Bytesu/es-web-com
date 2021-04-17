@@ -1,0 +1,22 @@
+
+.react-datepicker__year .react-datepicker__year-text {
+  display: inline-block;
+  width: 5rem;
+  margin: 2px;
+  height: 5rem;
+  line-height: 5rem;
+}
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+  width: 2.7rem !important;
+  line-height: 2.7rem !important;
+  font-size: 1rem !important;
+}
+.react-datepicker-popper {
+  z-index: 9 !important;
+}
+.react-datepicker {
+  font-size: 1.4rem !important;
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+  font-size: 1.4rem !important;
+}

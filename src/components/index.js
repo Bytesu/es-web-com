@@ -1,1 +1,6 @@
 export * from './slick'
+export * from './autoComponent'
+export * from './date'
+export * from './dialog'
+export * from './materialForm'
+export * from './materialForm/Example'

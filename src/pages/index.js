@@ -1,10 +1,11 @@
 import React from 'react';
-import {Slick} from '../components';
+import {Slick,FormExample} from '../components';
 
 const Index = () => {
     return (
         <div>
             <Slick></Slick>
+            <FormExample></FormExample>
         </div>
     );
 };
