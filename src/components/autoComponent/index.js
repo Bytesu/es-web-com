@@ -22,7 +22,7 @@ export function AutoComponent(props) {
         if (props.suggestFn)
             res = await props.suggestFn(keyword);
         return res;
-    }, [props.suggestFn]);
+    }, [props]);
     useEffect(()=>{
         setValue(props.selected||'');
     },[props.selected])

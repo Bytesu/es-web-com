@@ -7,9 +7,7 @@ class App extends React.PureComponent {
     render() {
         return (
             <AlertProvider>
-            <div className="App">
-                <Pages></Pages>
-            </div>
+                    <Pages></Pages>
             </AlertProvider>
         )
     };

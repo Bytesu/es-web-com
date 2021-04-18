@@ -19,7 +19,7 @@ function useTimeout(callback, delay, refs) {
         let id = setTimeout(tick, delay);
         return () => clearTimeout(id);
 
-    }, [delay, ...refs]);
+    }, [delay]);
 }
 
 export function usePusher() {
@@ -30,7 +30,7 @@ export function usePusher() {
         if (!!type && !!content) {
             setShow(true);
         }
-    }, [alert, setShow, setAlert]);
+    }, [type, setShow, content]);
     useTimeout(
         () => {
             setShow(false);
@@ -51,7 +51,7 @@ export function AlertProvider(props) {
     const pusher = usePusher();
     const {
         alert,
-        setAlert, show, setShow
+        show, setShow
     } = pusher;
 
     const {type, content} = alert;
@@ -70,8 +70,6 @@ export function AlertProvider(props) {
 
 
 export function useDialog(){
-    const [dialog, setDialog] = useState({type: '', content: '', delay: 0});
-
     return {};
 }
 export function DialogProvider(props) {

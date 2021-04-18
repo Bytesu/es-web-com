@@ -66,7 +66,7 @@ function ActionBox(props) {
     }
     const {children, ...restProps} = props;
     const bodyComponent = function () {
-        if (props.type == ActionBoxTypes.DIALOG_CONFIRM || props.type == ActionBoxTypes.DIALOG) {
+        if (props.type === ActionBoxTypes.DIALOG_CONFIRM || props.type === ActionBoxTypes.DIALOG) {
             return <Dialog
                 {...restProps}
             >

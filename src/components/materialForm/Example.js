@@ -36,8 +36,7 @@ export function FormExample(props) {
             console.log(e);
             return false
         }
-        return true;
-    }, [formRef]);
+    }, [formRef,alert]);
     const uploadData = React.useCallback(async (file) => {
         const formData = await formRef.current.submit();
         return {

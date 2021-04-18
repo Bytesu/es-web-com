@@ -57,7 +57,7 @@ export function Dialog(props) {
                 {props.children}
             </DialogContent>
             <DialogActions>
-                {props.type == ActionBoxTypes.DIALOG_CONFIRM ? <Button onClick={() => {
+                {props.type === ActionBoxTypes.DIALOG_CONFIRM ? <Button onClick={() => {
                     props.closeFn?.();
                 }} color="primary" autoFocus>
                     取消

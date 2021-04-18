@@ -1,7 +1,7 @@
 import React, {useState, forwardRef, useEffect, useImperativeHandle} from 'react';
 import {Formik} from "formik";
 import * as Yup from "yup";
-import {arrayToPluckObjFn, utils, genDefaultId} from '../../lib/'
+import {arrayToPluckObjFn, utils} from '../../lib/'
 import "../date/index.scss"
 import "./index.scss"
 import {AutoComponent} from "../autoComponent";
@@ -145,7 +145,7 @@ export function FormItem(props) {
             {props.validateIcon && !errors[name] && touched[name] ? <i className="valid fa fa-check-circle"></i> : null}
         </div>
         {props.validateBtn ?
-            <a className={"smarty-tag  smarty-addr-signup validate-zip-code pointer smarty-tag-grayed " + (verify.verify ? "smarty-tag-green" : "")}
+            <buttom className={"smarty-tag  smarty-addr-signup validate-zip-code pointer smarty-tag-grayed " + (verify.verify ? "smarty-tag-green" : "")}
                title="Address not verified. Click to verify."
                onClick={async () => {
                    let verifyRes = await props.validateAction?.(verify.label === 'Verify', values, props)
@@ -182,7 +182,7 @@ export function FormItem(props) {
                               label: "Verify"
                           })
                       }}
-                >{verify.label}</span></a> : null}
+                >{verify.label}</span></buttom> : null}
         {errors[name] && touched[name] ?
             <div className="error ">{errors[name]}</div> : null}
         {props.suffixDesc || null}
@@ -254,7 +254,6 @@ export const Form = forwardRef((props, ref) => {
                 const {handleSubmit} = props;
                 return <form
                     autoComplete="off"
-                    role="form"
                     noValidate="novalidate"
                     onSubmit={handleSubmit}
                 >

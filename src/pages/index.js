@@ -1,11 +1,11 @@
 import React from 'react';
-import {Slick,FormExample} from '../components';
+import { Typography } from '@material-ui/core';
+import 'fontsource-roboto';
 
 const Index = () => {
     return (
         <div>
-            <Slick></Slick>
-            <FormExample></FormExample>
+            <Typography variant="h1" component="h2" gutterBottom>component case</Typography>
         </div>
     );
 };
