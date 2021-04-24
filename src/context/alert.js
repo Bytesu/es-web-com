@@ -75,7 +75,7 @@ export function useDialog(){
 export function DialogProvider(props) {
 
     return  <DialogContext.Provider>
-
+        {props.children}
     </DialogContext.Provider>
 }
 
