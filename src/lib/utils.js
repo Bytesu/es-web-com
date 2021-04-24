@@ -72,42 +72,50 @@ export const utils = {
     isValidationCodeValid: function (v) {
         return /^\d\d(\d)+$/.test(v);
     },
+    /**
+     * cope content to clipboard
+     * @param content
+     * @param alert
+     */
+    copyToClipboard: function (content, alert) {
+        let _copyHelper = document.getElementById('kfamily-copyToClip');
 
-    copyToClipboard: function (content) {
-        // if (!_copyHelper) {
-        //     _copyHelper = $('<pre style="position:absolute;left:-9999px;top:0;"></pre>').appendTo(document.body);
-        // }
-        // _copyHelper.html(content);
-        // window.getSelection().removeAllRanges();
-        // var range = document.createRange();
-        // range.selectNode(_copyHelper[0]);
-        // window.getSelection().addRange(range);
-        // try {
-        //     // Now that we've selected the anchor text, execute the copy command
-        //     var successful = document.execCommand('copy');
-        //     var msg = successful ? 'successful' : 'unsuccessful';
-        //     if (successful) {
-        //         kfamily.alertService.show({
-        //             type: 'success',
-        //             content: '已复制到剪贴板!'
-        //         });
-        //     } else {
-        //         kfamily.alertService.show({
-        //             type: 'warning',
-        //             content: '复制到剪贴板时发生错误.'
-        //         });
-        //     }
-        // } catch (err) {
-        //     kfamily.alertService.show({
-        //         type: 'warning',
-        //         content: '复制到剪贴板时发生错误.'
-        //     });
-        // }
-        // Remove the selections - NOTE: Should use
-        // removeRange(range) when it is supported
-
-
-        // window.getSelection().removeAllRanges();
+        if (!_copyHelper) {
+            _copyHelper = document.createElement('div');
+            _copyHelper.id = 'kfamily-copyToClip';
+            _copyHelper.style.position = 'absolute';
+            _copyHelper.style.left = '-9999px';
+            _copyHelper.style.left = '-9999px';
+            _copyHelper.style.top = '0';
+            document.body.appendChild(_copyHelper);
+        }
+        _copyHelper.innerHTML =content;
+        window.getSelection().removeAllRanges();
+        var range = document.createRange();
+        range.selectNode(_copyHelper);
+        window.getSelection().addRange(range);
+        try {
+            // Now that we've selected the anchor text, execute the copy command
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            if (successful) {
+                alert.setAlert({
+                    type: 'success',
+                    content: '已复制到剪贴板!'
+                });
+            } else {
+                alert.setAlert({
+                    type: 'warning',
+                    content: '复制到剪贴板时发生错误.'
+                });
+            }
+        } catch (err) {
+            alert.setAlert({
+                type: 'warning',
+                content: '复制到剪贴板时发生错误.'
+            });
+        }
+        window.getSelection().removeAllRanges();
     },
 
 
