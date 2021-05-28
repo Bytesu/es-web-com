@@ -1,7 +1,7 @@
-import '../App.css';
+import '../common.css';
 import React from 'react';
 import Search from './'
-import {ConstCode, postFn} from "../request";
+import {ConstCode, postFn} from "../../lib/request";
 
 class App extends React.PureComponent {
     state = {

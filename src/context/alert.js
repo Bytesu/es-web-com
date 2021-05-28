@@ -72,6 +72,7 @@ export function AlertProvider(props) {
 export function useDialog(){
     return {};
 }
+
 export function DialogProvider(props) {
 
     return  <DialogContext.Provider>
@@ -80,11 +81,11 @@ export function DialogProvider(props) {
 }
 
 export const ORDER_KEY = "order_data";
+
 export const ORDER_TYPE = {
     ORDER: "order",
     REFILL: "refill"
 };
-
 
 export function useOrder() {
     const [orderInfo, setOrderInfo] = useState(()=>{

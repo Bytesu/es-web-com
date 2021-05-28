@@ -37,7 +37,7 @@ function DropdownV2List(props) {
     </div>
 }
 
-export function DropdownV2(props) {
+export function Dropdown(props) {
     const [list, setList] = React.useState(props.list || [])
     const [val] = React.useState(props.val || '操作')
     const [open, setOpen] = React.useState(false)
