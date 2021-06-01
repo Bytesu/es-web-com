@@ -1,0 +1,37 @@
+
+*{
+    scroll-behavior:smooth;
+}
+.page{
+    height:100vh;
+    background:#445760;
+    padding:20px;
+    box-sizing: border-box;
+
+}
+.page button{
+    display: block;
+    line-height: 30px;
+    margin: 0 auto;
+}
+.panel{
+    padding: 0px;
+}
+.panel-container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;top:0;
+    overflow:auto;
+}
+.panel-container .content{
+    background: rgb(255 255 255);
+
+}
+
+.close{
+    text-align: right;
+    line-height: 50px;
+    padding: 0 20px;
+    color:red;
+}
